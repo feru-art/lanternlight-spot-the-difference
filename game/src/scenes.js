@@ -7,12 +7,12 @@
 
 export const LANTERNLIGHT_SCENES = [
   {
-    name: 'Harbour at Dusk',
-    parSeconds: 75,
-    sky: ['#ffd9a0', '#ff9d76'],
+    name: 'Harbour at Noon',
+    parSeconds: 90,
+    sky: ['#7ec8f7', '#cfeeff'],
     groundY: 360,
-    ground: '#f2d8a7',
-    water: { y: 290, h: 70, color: '#2e7f9e' },
+    ground: '#f7e3b0',
+    water: { y: 290, h: 70, color: '#2a9db5' },
     objects: [
       { k: 'sun', x: 520, y: 70, r: 36, c: '#ffdf6b' },
       { k: 'cloud', x: 110, y: 62, s: 1.0, c: '#fff6e8' },
@@ -41,15 +41,17 @@ export const LANTERNLIGHT_SCENES = [
       { x: 322, y: 110, obj: 4, change: { x: 322, y: 110 } },
       { x: 64, y: 235, obj: 5, change: { stripe: '#2e7f9e' } },
       { x: 252, y: 390, obj: 7, change: { roof: '#e07856' } },
+      { x: 432, y: 300, obj: 9, change: { sail: '#ffd76a' } },
       { x: 302, y: 338, obj: 12, change: { hide: true } },
+      { x: 480, y: 318, add: { k: 'fish', x: 480, y: 318, s: 0.9, c: '#4ade80' } },
     ],
   },
   {
-    name: 'Night Market',
-    parSeconds: 100,
-    sky: ['#2b1d4e', '#4c2a6b'],
+    name: 'Lantern Festival',
+    parSeconds: 105,
+    sky: ['#3d0c1e', '#7a1f3d'],
     groundY: 380,
-    ground: '#3a2a4a',
+    ground: '#2a0e1e',
     water: null,
     objects: [
       { k: 'moon', x: 530, y: 62, r: 30, c: '#f4ead8' },
@@ -84,13 +86,13 @@ export const LANTERNLIGHT_SCENES = [
     ],
   },
   {
-    name: 'Garden Pond',
-    parSeconds: 130,
-    sky: ['#bfe8ff', '#e8f9ff'],
+    name: 'Autumn Garden',
+    parSeconds: 120,
+    sky: ['#ffe0b3', '#ffd0a0'],
     groundY: 300,
-    ground: '#7ec850',
+    ground: '#c98f3d',
     water: null,
-    pond: { x: 304, y: 392, rx: 220, ry: 58, color: '#4db2e8' },
+    pond: { x: 304, y: 392, rx: 220, ry: 58, color: '#5aa8d8' },
     objects: [
       { k: 'sun', x: 90, y: 66, r: 34, c: '#ffdf6b' },
       { k: 'cloud', x: 280, y: 56, s: 0.9, c: '#ffffff' },
@@ -122,8 +124,6 @@ export const LANTERNLIGHT_SCENES = [
       { x: 540, y: 250, obj: 6, change: { leaf: '#e07856' } },
       { x: 450, y: 170, add: { k: 'butterfly', x: 450, y: 170, s: 0.9, c: '#ffd76a' } },
       { x: 304, y: 330, obj: 16, change: { c: '#7c3f16' } },
-      { x: 120, y: 380, obj: 14, change: { c: '#7c6a55' } },
-      { x: 390, y: 140, obj: 4, change: { x: 390, y: 140 } },
     ],
   },
 ];

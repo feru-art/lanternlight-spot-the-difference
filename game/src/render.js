@@ -741,7 +741,7 @@ export function drawLanternlightOverlay(ctx, state) {
     return drawLanternlightCard(ctx, 'Lanternlight', [
       'Spot the difference — two pictures, changes hiding in the right one.',
       'Click a change in either picture. Find them all before time runs out.',
-      'Three scenes, rising difficulty: Harbour at Dusk, Night Market, Garden Pond.',
+      'Three scenes: Harbour at Noon, Lantern Festival, Autumn Garden.',
     ], [{ id: 'start', label: '▶  Start playing' }]);
   }
   if (state.phase === 'scene-complete') {
