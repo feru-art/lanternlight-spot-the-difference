@@ -6,11 +6,11 @@
 import { startLanternlightScene } from './engine.js';
 
 const LANTERNLIGHT_SHOT_PRESETS = {
-  // The cover: scene 1 mid-hunt — five differences found (gold rings on both
+  // The cover: scene 2 mid-hunt — five differences found (gold rings on both
   // panels), three still hiding, counter and timer big and readable.
-  cover: { scene: 0, found: [0, 1, 2, 3, 4], secondsLeft: 72, phase: 'play', score: 540 },
-  // Scene 2 mid-hunt, three found.
-  market: { scene: 1, found: [0, 1, 2], secondsLeft: 95, phase: 'play', score: 310 },
+  cover: { scene: 1, found: [0, 1, 2, 3, 4], secondsLeft: 66, phase: 'play', score: 540 },
+  // Scene 1 mid-hunt, four found — the harbour scene in the set.
+  harbour: { scene: 0, found: [0, 1, 2, 3], secondsLeft: 80, phase: 'play', score: 420 },
   // Scene 3 nearly done, six found, clock running low.
   garden: { scene: 2, found: [0, 1, 2, 3, 4, 5], secondsLeft: 48, phase: 'play', score: 650 },
   // The victory card after all three scenes.
