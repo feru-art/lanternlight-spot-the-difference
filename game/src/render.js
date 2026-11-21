@@ -739,15 +739,15 @@ export function drawLanternlightOverlay(ctx, state) {
   const scene = state.scene;
   if (state.phase === 'title') {
     return drawLanternlightCard(ctx, 'Lanternlight', [
-      'Spot the difference — two pictures, eight changes.',
-      'Click a change in either picture. Find all 8 before time runs out.',
-      'Three scenes: Harbour at Dusk, Night Market, Garden Pond.',
+      'Spot the difference — two pictures, changes hiding in the right one.',
+      'Click a change in either picture. Find them all before time runs out.',
+      'Three scenes, rising difficulty: Harbour at Dusk, Night Market, Garden Pond.',
     ], [{ id: 'start', label: '▶  Start playing' }]);
   }
   if (state.phase === 'scene-complete') {
     const stars = state.strikes === 0 && state.timeLeftMs > 30000 ? '★★★' : state.strikes <= 1 ? '★★' : '★';
     return drawLanternlightCard(ctx, 'Scene complete!', [
-      `${scene.name} — all 8 differences found.  ${stars}`,
+      `${scene.name} — all ${scene.differences.length} differences found.  ${stars}`,
       `Scene score ${state.sceneScore}  ·  Total score ${state.score}`,
       state.sceneIndex < 2 ? 'A harder scene is waiting.' : 'That was the last scene!',
     ], state.sceneIndex < 2
@@ -755,16 +755,17 @@ export function drawLanternlightOverlay(ctx, state) {
       : [{ id: 'finish', label: 'See my results' }]);
   }
   if (state.phase === 'victory') {
+    const total = state.scenes.reduce((n, s) => n + s.differences.length, 0);
     return drawLanternlightCard(ctx, 'You found them all!', [
-      `All 3 scenes complete — 24 differences found.  ★★★`,
+      `All 3 scenes complete — ${total} differences found.  ★★★`,
       `Total score ${state.score}  ·  Strikes ${state.strikes}`,
       'Thanks for playing Lanternlight.',
     ], [{ id: 'again', label: '↻  Play again' }]);
   }
   if (state.phase === 'time-up') {
     return drawLanternlightCard(ctx, "Time's up!", [
-      `${scene.name} — you found ${state.found.filter(Boolean).length} of 8 differences.`,
-      'The eight changes are still hiding in the right picture.',
+      `${scene.name} — you found ${state.found.filter(Boolean).length} of ${scene.differences.length} differences.`,
+      'The changes are still hiding in the right picture.',
     ], [{ id: 'retry', label: '↻  Try this scene again' }]);
   }
   if (state.phase === 'paused') {

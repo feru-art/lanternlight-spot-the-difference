@@ -8,7 +8,7 @@
 export const LANTERNLIGHT_SCENES = [
   {
     name: 'Harbour at Dusk',
-    parSeconds: 90,
+    parSeconds: 75,
     sky: ['#ffd9a0', '#ff9d76'],
     groundY: 360,
     ground: '#f2d8a7',
@@ -41,14 +41,12 @@ export const LANTERNLIGHT_SCENES = [
       { x: 322, y: 110, obj: 4, change: { x: 322, y: 110 } },
       { x: 64, y: 235, obj: 5, change: { stripe: '#2e7f9e' } },
       { x: 252, y: 390, obj: 7, change: { roof: '#e07856' } },
-      { x: 432, y: 300, obj: 9, change: { sail: '#ffd76a' } },
       { x: 302, y: 338, obj: 12, change: { hide: true } },
-      { x: 480, y: 318, add: { k: 'fish', x: 480, y: 318, s: 0.9, c: '#4ade80' } },
     ],
   },
   {
     name: 'Night Market',
-    parSeconds: 105,
+    parSeconds: 100,
     sky: ['#2b1d4e', '#4c2a6b'],
     groundY: 380,
     ground: '#3a2a4a',
@@ -87,7 +85,7 @@ export const LANTERNLIGHT_SCENES = [
   },
   {
     name: 'Garden Pond',
-    parSeconds: 120,
+    parSeconds: 130,
     sky: ['#bfe8ff', '#e8f9ff'],
     groundY: 300,
     ground: '#7ec850',
@@ -124,6 +122,8 @@ export const LANTERNLIGHT_SCENES = [
       { x: 540, y: 250, obj: 6, change: { leaf: '#e07856' } },
       { x: 450, y: 170, add: { k: 'butterfly', x: 450, y: 170, s: 0.9, c: '#ffd76a' } },
       { x: 304, y: 330, obj: 16, change: { c: '#7c3f16' } },
+      { x: 120, y: 380, obj: 14, change: { c: '#7c6a55' } },
+      { x: 390, y: 140, obj: 4, change: { x: 390, y: 140 } },
     ],
   },
 ];
