@@ -31,6 +31,9 @@ export const LANTERNLIGHT_SCENES = [
       { k: 'rock', x: 540, y: 448, s: 1.0, c: '#8d8578' },
       { k: 'rock', x: 470, y: 452, s: 0.7, c: '#a39a8a' },
       { k: 'fish', x: 380, y: 308, s: 0.7, c: '#f472b6' },
+      { k: 'boat', x: 300, y: 308, s: 0.45, hull: '#7c5cbf', sail: '#ffe9a8' },
+      { k: 'cloud', x: 480, y: 150, s: 0.6, c: '#ffe9c4' },
+      { k: 'star', x: 560, y: 455, r: 7, c: '#ff9d76' },
     ],
     differences: [
       { x: 520, y: 70, obj: 0, change: { r: 48 } },
@@ -67,6 +70,9 @@ export const LANTERNLIGHT_SCENES = [
       { k: 'flower', x: 382, y: 428, s: 1.1, petal: '#ff7ab8', center: '#ffd76a' },
       { k: 'firefly', x: 180, y: 150, s: 1.0, c: '#d9f99d' },
       { k: 'firefly', x: 360, y: 120, s: 0.8, c: '#d9f99d' },
+      { k: 'star', x: 180, y: 70, r: 5, c: '#ffe9a8' },
+      { k: 'star', x: 340, y: 60, r: 5, c: '#ffe9a8' },
+      { k: 'lantern', x: 380, y: 96, s: 0.8, c: '#4ade80' },
     ],
     differences: [
       { x: 530, y: 62, obj: 0, change: { c: '#ffd76a' } },
@@ -105,6 +111,9 @@ export const LANTERNLIGHT_SCENES = [
       { k: 'rock', x: 120, y: 380, s: 0.9, c: '#9aa0a6' },
       { k: 'rock', x: 480, y: 386, s: 1.0, c: '#9aa0a6' },
       { k: 'bridge', x: 304, y: 330, s: 1.0, c: '#a16207' },
+      { k: 'flower', x: 90, y: 448, s: 0.9, petal: '#ffd76a', center: '#ff9d76' },
+      { k: 'flower', x: 560, y: 420, s: 0.9, petal: '#ff7ab8', center: '#ffffff' },
+      { k: 'butterfly', x: 120, y: 240, s: 0.7, c: '#c084fc' },
     ],
     differences: [
       { x: 90, y: 66, obj: 0, change: { r: 46 } },
